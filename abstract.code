@@ -33,7 +33,7 @@ function server (file, chunk) {
   
   
   
- //smart contract força participantes a entrarem em consenso e elimina possibilidade de um nao pagar por fraude ou mesmo 
+ //smart contract puts cost on scams, forces participants to enter into a consensus and eliminates the possibility of a side failure
 funcion make_smart_contract (client.public_key, server.public_key, price) {  
     smart_contract_address = new multisign (client.public_key, server.public_key, "2-of-2"); 
     out = request client payment (smart_contract_address);
