@@ -1,0 +1,45 @@
+
+//requiring a minimum value, this function makes the creation of new accounts a costly process, discouraging attacks
+function create_new_account () {
+  if (address.balance >= 100) { //equivalent to one dollar, for example.
+    new account (address);
+    account.balance = address.balance;
+  }
+}
+
+
+listen(port 80); 
+if receive_request (client && file && chunk) {
+  server (file, chunk, public_key_client);
+ }
+
+function server (file, chunk) {
+   if (file.chunk exists)
+      response = make_smart_contract(client.public_key, server.public_key, price(file.chunk));
+      if ( response == completed ) {
+            out = data-transfer (client, file.chunk);
+            if (out) {
+                sign_payment();
+                client_response = wait_client_assign();
+                if (!client_response) {
+                    blacklist (client);
+                } else {
+                    priority_list(client);
+                }
+            }
+      }
+   }
+}
+  
+  
+  
+ //smart contract força participantes a entrarem em consenso e elimina possibilidade de um nao pagar por fraude ou mesmo 
+funcion make_smart_contract (client.public_key, server.public_key, price) {  
+    smart_contract_address = new multisign (client.public_key, server.public_key, "2-of-2"); 
+    out = request client payment (smart_contract_address);
+    return out; 
+  }
+  
+  sign_server_payment() {
+  sign multisign payment (server.private_key, sever.public_key, price);  
+  }
